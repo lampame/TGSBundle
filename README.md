@@ -1,11 +1,11 @@
-# TGSBundle
+# [![Build GramJS Bundle](https://github.com/lampame/TGSBundle/actions/workflows/build.yml/badge.svg)](https://github.com/lampame/TGSBundle/actions/workflows/build.yml)
 
 Auto-built browser bundle of [GramJS](https://github.com/gram-js/gramjs) for use in plugins via CDN.
 
 ## Usage
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/USERNAME/TGSBundle@main/telegram.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/lampame/TGSBundle@main/telegram.min.js"></script>
 <script>
   const client = new window.telegram.TelegramClient(
     window.telegram.Api,
@@ -22,7 +22,7 @@ Auto-built browser bundle of [GramJS](https://github.com/gram-js/gramjs) for use
 Pin a specific tag instead of `@main` to avoid unexpected changes caused by the jsDelivr cache (up to 7 days):
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/USERNAME/TGSBundle@v1.2.3/telegram.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/lampame/TGSBundle@v1.2.3/telegram.min.js"></script>
 ```
 
 The `v1.2.3` tag should match the corresponding GramJS release.
