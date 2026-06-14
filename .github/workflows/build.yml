@@ -21,7 +21,7 @@ jobs:
           cd gramjs
           npm ci
           NODE_ENV="production" npx webpack
-          cp browser/gramjs.js ../telegram.js
+          cp browser/telegram.js ../telegram.js
           cd ..
 
       - name: Minify Bundle
