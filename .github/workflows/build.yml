@@ -22,6 +22,9 @@ jobs:
           git clone https://github.com/gram-js/gramjs.git gramjs
           cd gramjs
           npm ci
+          # Fix crypto: alias to GramJS's built-in browser crypto polyfill
+          # instead of false (empty object) which breaks randomBytes/createHash
+          sed -i 's|crypto: false|crypto: path.resolve(__dirname, "gramjs/crypto/crypto.ts")|' webpack.config.js
           NODE_ENV="production" npx webpack
           cp browser/telegram.js ../telegram.js
           cd ..
