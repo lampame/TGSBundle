@@ -4,6 +4,7 @@
   "private": true,
   "description": "GramJS browser bundle for Telegram plugin usage",
   "scripts": {
+    "prebuild": "cp patches/crypto.js node_modules/telegram/crypto/crypto.js",
     "build": "webpack --mode production && npx terser telegram.js --compress --mangle -o telegram.min.js"
   },
   "devDependencies": {

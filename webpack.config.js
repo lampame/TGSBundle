@@ -10,7 +10,7 @@ module.exports = {
       fs: false,
       path: require.resolve("path-browserify"),
       net: false,
-      crypto: require.resolve("telegram/crypto/crypto.js"),
+      crypto: path.resolve(__dirname, "patches/crypto.js"),
       os: require.resolve("os-browserify/browser"),
       util: require.resolve("util/"),
       assert: false,
